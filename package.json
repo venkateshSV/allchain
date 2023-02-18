@@ -4,6 +4,7 @@
   "description": "A package that helps a developer to use any blockchain network in their project and create decentralised application.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/venkateshSV/btp_package/issues"
   },
-  "homepage": "https://github.com/venkateshSV/btp_package#readme"
+  "homepage": "https://github.com/venkateshSV/btp_package#readme",
+  "dependencies": {
+    "axios": "^1.3.2",
+    "express": "^4.18.2",
+    "web3": "^1.8.2"
+  }
 }

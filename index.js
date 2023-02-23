@@ -1,47 +1,42 @@
-const Web3 = require('web3');
+const web3 = require("@solana/web3.js");
+const execSync = require('child_process').execSync;
 
-
-var url = 'https://mainnet.infura.io/v3/ebaa91e650304dc9aaf9f7df61957564'
-var web3 = new Web3(url)
-var Accounts = require('web3-eth-accounts');
-var accounts = new Accounts(url);
-
-function createAccount()
-{
-    var out =  web3.eth.accounts.create();
-    return out;
-}
+let connection = new web3.Connection(web3.clusterApiUrl("devnet"), "confirmed");
 function currentProvider()
 {
-    var out = web3.eth.currentProvider;
-    return out;
+    let slot = connection.getSlot().then(console.log);
+    return slot;
 }
-async function getGasPrice()
+function createWallet()
 {
-    var out = await web3.eth.getGasPrice();
-    return out;
+    const execSync = require('child_process').execSync;
+    const output1 = execSync('mkdir solana-wallet', { encoding: 'utf-8' });  // the default is 'buffer'
+    const output2 = execSync('solana-keygen new --outfile solana-wallet/keypair.json', { encoding: 'utf-8' });  // the default is 'buffer'
+    // console.log('Output was:\n', output2);
+    
 }
-function sendTransaction(fromAcc,gasPrice,gas,toAcc,val,data,password)
+function getPubkey()
 {
-    var out = web3.eth.personal.sendTransaction({
-        from: fromAcc,
-        gasPrice: gasPrice,
-        gas: gas,
-        to: toAcc,
-        value: val,
-        data: data
-    },password)
-    return out;
+    var pubkey = execSync('solana-keygen pubkey /Users/venky/Desktop/Projects/btp_package/test-folder/solana-wallet/keypair.json', { encoding: 'utf-8' });
+    // console.log(pubkey);
+    return pubkey;
 }
-module.exports = 
+async function getBalance()
 {
-    createAccount,
+    let pkey = getPubkey();
+    console.log(pkey.toString());
+    // const pkey = 'S6qY45yeSJrbGB4v6ioSCj3RfLZ8JVEPdU876vWWvCq';
+    let pubkey = new web3.PublicKey(pkey).toBase58();
+    console.log(pubkey);
+    let balance = await connection.getBalance(pubkey);
+    console.log(`${balance / web3.LAMPORTS_PER_SOL} SOL`);
+    return balance;
+}
+
+module.exports=
+{
     currentProvider,
-    getGasPrice,
-    sendTransaction
+    createWallet,
+    getPubkey,
+    getBalance
 }
-// console.log(10*100);
-// console.log(web3.eth.accounts.create());
-
-
-

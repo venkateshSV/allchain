@@ -1,2 +1,2 @@
 const obj = require("btp_package")
-console.log(obj.getGasPrice())
+console.log(obj.getBalance());

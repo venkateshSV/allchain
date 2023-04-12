@@ -4,9 +4,8 @@
 
 #### Develop, Deploy, and Innovate - seamlessly.
 
-[![NPM Version][npm-version-image]][npm-url]
-[![NPM Install Size][npm-install-size-image]][npm-install-size-url]
-[![NPM Downloads][npm-downloads-image]][npm-downloads-url]
+[![NPM Version][https://img.shields.io/badge/npm-v9.3.1-green]]
+[![NPM Downloads][https://img.shields.io/badge/downloads-%3E100-blue]]
 
 A package that helps a developer to use any blockchain network in their project and create decentralised application.
 

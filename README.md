@@ -80,9 +80,27 @@ Following are the features of allchain.
 
 ## Usage/Examples
 
-The following code demonstrates the working of allchain's one of the other feature.
+The following code demonstrates the working of allchain's feature.
 
-To get the wallet balance of your account using account address.
+1. To create an account on either of the chain use the following functions.
+
+```javascript
+allchain = require('allchain');
+
+function eth_createAccount()
+{
+    return allchain.Eth.createAccount();
+}
+
+function sol_createAccount()
+{
+    return allchain.Sol.createAccount();
+}
+
+```
+
+
+2. To get the wallet balance of your account using account address.
 
 ```javascript
 allchain = require('allchain');

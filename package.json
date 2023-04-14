@@ -1,6 +1,6 @@
 {
   "name": "allchain",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A package that helps a developer to use any blockchain network in their project and create decentralised application.",
   "main": "index.js",
   "scripts": {

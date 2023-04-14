@@ -1,5 +1,5 @@
 
-![Logo](https://drive.google.com/uc?id=1TzBlEStp_q_aEO0wTwnJIXB3oYMS4QOb)
+![Logo](https://drive.google.com/uc?id=1nRZ_WyzWSPc4vLS9TH4rnWKXoIFJhX9d)
 
 
 #### Develop, Deploy, and Innovate - seamlessly.
@@ -98,7 +98,7 @@ function sol_balance(account_address)
 }
 
 ```
-The above functions returns the balance of the provided address.
+The above functions return the balance of the provided address.
 
 
 ## Support

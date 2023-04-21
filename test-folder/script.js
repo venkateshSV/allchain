@@ -1,7 +1,7 @@
 const web3 = require("@solana/web3.js");
 const bs58 = require('bs58');
 
-const obj = require("btp_package")
+const obj = require("allchain");
 
 let secretKey = bs58.decode("4pSsnhLYoS7dbokLkF283cjWbujtpnQ64SgsGCqYQcdE4mUQxvBM9Pm5ZrafwEYKcyYhUtgDPHsWT83HmyY5bgxC");
 // console.log(`[${web3.Keypair.fromSecretKey(secretKey).secretKey}]`);
@@ -12,8 +12,8 @@ const topublicKey = new web3.PublicKey('Ch7VzgEdVj3v7Hyxukm1tQQTaqvwhV51LbwAA1W5
 
 // console.log(obj.airdrop(obj.getPubkey(),1));
 // console.log(obj.Sol.sendTransaction(fromkeyPair,topublicKey,1));
-console.log(obj.Sol.getTransaction(obj.Sol.getPubkey()));
+// console.log(obj.Sol.getTransaction(obj.Sol.getPubkey()));
 // console.log(obj.Sol.getPubkey());
 // console.log(obj.createAccount());
-// console.log(obj.Sol.currentProvider());
+console.log(obj.Sol.currentProvider());
 // console.log(obj.Sol.getBalance());

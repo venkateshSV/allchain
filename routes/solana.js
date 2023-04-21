@@ -14,6 +14,12 @@ class Sol{
     }
     static currentProvider()
     {
+        console.log('The current RPC provider is :');
+        console.log(connection.rpcEndpoint);
+        return connection.rpcEndpoint;
+    }
+    static getBlockNumber()
+    {
         let slot = connection.getSlot().then(console.log);
         return slot;
     }
